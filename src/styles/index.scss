@@ -1,0 +1,13 @@
+@import './reset.scss';
+@import './variables/global.scss';
+@import './themes/light.scss';
+@import './themes/dark.scss';
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;600;700&display=swap');
+
+.app {
+	background-color: var(--bg-color);
+	color: var(--secondary-color);
+	font: var(--font-m);
+	min-height: 100vh;
+	width: 100%;
+}
