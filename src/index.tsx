@@ -1,7 +1,7 @@
 import reactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import { App } from './App'
-import { ThemeProvider } from './helpers/theme/themeProvider'
+import { ThemeProvider } from 'app/providers/ThemeProvider'
+import { App } from 'app/App'
 
 const root = reactDOM.createRoot(document.getElementById('root'))
 

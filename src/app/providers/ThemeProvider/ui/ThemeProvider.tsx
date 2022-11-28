@@ -3,7 +3,7 @@ import {
 	AppTheme,
 	LOCAL_STORAGE_APP_THEME_KEY,
 	ThemeContext
-} from './themeContext'
+} from '../lib/themeContext'
 
 const initialTheme =
 	(localStorage.getItem(LOCAL_STORAGE_APP_THEME_KEY) as AppTheme) ||

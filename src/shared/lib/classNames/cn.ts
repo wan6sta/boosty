@@ -8,7 +8,7 @@ export const cn = (
 	return [
 		cls,
 		...additional,
-		Object.entries(mods)
+		...Object.entries(mods)
 			.filter(([_, value]) => value)
 			.map(([cls, _]) => cls)
 	].join(' ')
