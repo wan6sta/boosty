@@ -1,13 +1,13 @@
-import { createContext } from 'react'
+import {createContext} from 'react'
 
 export const enum AppTheme {
-	LIGHT = 'light',
-	DARK = 'dark'
+  LIGHT = 'light',
+  DARK = 'dark'
 }
 
-export interface ThemeContextState {
-	theme?: AppTheme
-	setTheme?: (theme: AppTheme) => void
+interface ThemeContextState {
+  theme?: AppTheme
+  setTheme?: (theme: AppTheme) => void
 }
 
 export const ThemeContext = createContext<ThemeContextState>({})

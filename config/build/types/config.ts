@@ -1,4 +1,4 @@
-export type BuildMode = 'production' | 'development'
+type BuildMode = 'production' | 'development'
 
 export type BuildEnv = {
 	mode: BuildMode
