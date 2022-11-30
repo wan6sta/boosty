@@ -1,0 +1,17 @@
+.AppLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  max-height: 30px;
+  transition: 0.1s ease-in;
+  color: inherit;
+
+  &:hover {
+    transform: scale(105%);
+  }
+}
+
+.light {
+  color: var(--white);
+}

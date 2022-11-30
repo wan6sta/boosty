@@ -1,4 +1,11 @@
 :root {
+  // COLORS
+  --white: #f3f3f3;
+  --dark: #181818;
+
+  // SHADOWS
+  --default-box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.12);
+
   // FONT
   --font-family: 'Anek Devanagari', sans-serif;
 
@@ -9,4 +16,7 @@
   --font-size-l: 22px;
   --font-line-l: 30px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family);
+
+  // SIZES
+  --navbar-height: 50px;
 }
