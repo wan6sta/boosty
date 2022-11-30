@@ -3,7 +3,8 @@ import {cn} from 'shared/lib/classNames/cn'
 import cls from './Button.module.scss'
 
 export const enum ButtonMods {
-  'CLEAR' = 'clear'
+  'CLEAR' = 'clear',
+  'LIGHT' = 'light'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
