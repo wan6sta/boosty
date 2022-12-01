@@ -1,6 +1,6 @@
 declare module '*.module.scss' {
-	const cls: Record<string, string>
-	export = cls
+  const cls: Record<string, string>
+  export = cls
 }
 
 declare module '*.png'

@@ -11,7 +11,7 @@ i18n
     fallbackLng: 'ru',
     debug: __IS_DEV__,
     interpolation: {
-      escapeValue: false,
+      escapeValue: false
     }
   })
 

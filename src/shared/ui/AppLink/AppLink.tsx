@@ -1,14 +1,14 @@
-import {FC, PropsWithChildren} from 'react'
-import {cn} from 'shared/lib/classNames/cn'
+import { FC, PropsWithChildren } from 'react'
+import { cn } from 'shared/lib/classNames/cn'
 import cls from './AppLink.module.scss'
-import {Link, LinkProps} from "react-router-dom";
+import { Link, LinkProps } from 'react-router-dom'
 
 export const enum AppLinkMods {
   LIGHT = 'light'
 }
 
 interface AppLinkProps extends LinkProps {
-  className?: string,
+  className?: string
   mode?: AppLinkMods
 }
 

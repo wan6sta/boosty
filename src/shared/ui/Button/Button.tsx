@@ -1,5 +1,5 @@
-import {ButtonHTMLAttributes, FC, PropsWithChildren} from 'react'
-import {cn} from 'shared/lib/classNames/cn'
+import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react'
+import { cn } from 'shared/lib/classNames/cn'
 import cls from './Button.module.scss'
 
 export const enum ButtonMods {
@@ -8,12 +8,12 @@ export const enum ButtonMods {
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string,
+  className?: string
   mods?: ButtonMods
 }
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = (props) => {
-  const {className, children, mods, ...otherProps} = props
+  const { className, children, mods, ...otherProps } = props
 
   return (
     <button

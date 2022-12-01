@@ -3,7 +3,7 @@ type ClassNamesMods = Record<string, string | boolean>
 export const cn = (
   cls: string,
   mods: ClassNamesMods = {},
-  additional: Array<string> = []
+  additional: string[] = []
 ): string => {
   return [
     cls,
