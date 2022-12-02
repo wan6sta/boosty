@@ -1,9 +1,6 @@
 import { FC } from 'react'
 import { cn } from 'shared/lib/classNames/cn'
 import { AppTheme, useTheme } from 'app/providers/ThemeProvider'
-import { Button, ButtonMods } from 'shared/ui/Button/Button'
-import lightIcon from 'shared/assets/icons/light.png'
-import darkIcon from 'shared/assets/icons/dark.png'
 import cls from './ThemeSwitcher.module.scss'
 
 interface ThemeSwitcherProps {
@@ -15,17 +12,12 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
 
   const { theme, toggleTheme } = useTheme()
 
+  const isDark = theme === AppTheme.DARK
+
   return (
-    <Button
-      className={cn(cls.ThemeSwitcher, {}, [className])}
-      onClick={toggleTheme}
-      mods={ButtonMods.CLEAR}
-    >
-      {
-        theme === AppTheme.LIGHT
-          ? <img src={darkIcon} alt={'darkIcon'}/>
-          : <img src={lightIcon} alt={'lightIcon'}/>
-      }
-    </Button>
+    <div onClick={toggleTheme} className={cn(cls.ThemeSwitcher, { [cls.ThemeSwitcherDark]: isDark })}>
+      <div className={cn(cls.circle, { [cls.circleDark]: isDark }, [className])}>
+      </div>
+    </div>
   )
 }

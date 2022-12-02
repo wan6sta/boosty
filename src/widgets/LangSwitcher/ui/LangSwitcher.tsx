@@ -18,8 +18,8 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
   return (
     <Button
       className={cn('', {}, [className])}
-      mods={ButtonMods.LIGHT}
       onClick={changeLanguage}
+      mods={ButtonMods.CLEAR}
     >
       {t('язык')}
     </Button>

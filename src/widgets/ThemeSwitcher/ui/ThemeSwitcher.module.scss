@@ -1,3 +1,28 @@
 .ThemeSwitcher {
-  width: 30px;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.ThemeSwitcherDark {
+  background-color: var(--secondary-color);
+  border: 1px var(--bg-color) solid !important;
+}
+
+.circle {
+  margin-left: 2px;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  transition: 0.2s ease-in;
+}
+
+.circleDark {
+  margin-left: 23px;
+  background-color: var(--bg-color-darker);
 }

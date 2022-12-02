@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { cn } from 'shared/lib/classNames/cn'
-import { AppLink, AppLinkMods } from 'shared/ui/AppLink/AppLink'
-import cls from './Navbar.module.scss'
 import { useTranslation } from 'react-i18next'
+import { cn } from 'shared/lib/classNames/cn'
+import { AppLink } from 'shared/ui/AppLink/AppLink'
+import cls from './Navbar.module.scss'
 
 interface NavbarProps {
   className?: string
@@ -15,8 +15,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
   return (
     <div className={cn(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
-        <AppLink mode={AppLinkMods.LIGHT} to='/'>{t('Главная')}</AppLink>
-        <AppLink mode={AppLinkMods.LIGHT} to='/about'>{t('О сайте')}</AppLink>
+        <AppLink to='/'>{t('Главная')}</AppLink>
+        <AppLink to='/about'>{t('О сайте')}</AppLink>
       </div>
     </div>
   )
