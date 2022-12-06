@@ -1,0 +1,5 @@
+.PageLoader {
+  display: flex;
+  height: calc(100vh - var(--navbar-height));
+  flex-grow: 1;
+}
