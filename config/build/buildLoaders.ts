@@ -5,6 +5,17 @@ import { BuildOptions } from './types/config'
 export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
   const { isDev } = options
 
+  const babelLoader = {
+    test: /\.ts$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
+
   const svgLoader = {
     rules: [
       {
@@ -50,5 +61,5 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
     ]
   }
 
-  return [typescriptLoader, scssLoader, fileLoader, svgLoader]
+  return [babelLoader, typescriptLoader, scssLoader, fileLoader, svgLoader]
 }
