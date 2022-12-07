@@ -27,6 +27,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-floating-promises': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'off',
+    'n/handle-callback-err': 'warn',
     'i18next/no-literal-string': 2
   }
 }
