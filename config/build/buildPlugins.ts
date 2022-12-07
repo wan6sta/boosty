@@ -2,13 +2,14 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import webpack, { ProgressPlugin, WebpackPluginInstance } from 'webpack'
 import { BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 export const buildPlugins = (
   options: BuildOptions
 ): WebpackPluginInstance[] => {
   const { paths, isDev } = options
 
-  return [
+  const plugins: WebpackPluginInstance[] = [
     new HtmlWebpackPlugin({
       template: paths.html
     }),
@@ -20,6 +21,12 @@ export const buildPlugins = (
     new webpack.DefinePlugin({
       __IS_DEV__: isDev
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new BundleAnalyzerPlugin({ openAnalyzer: false })
   ]
+
+  if (isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin())
+  }
+
+  return plugins
 }
