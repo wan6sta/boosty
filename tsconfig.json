@@ -27,6 +27,7 @@
     "./src/**/*.ts",
     "./config/**/*.ts",
     "./config/**/*.tsx",
+    "./config/storybook/*.js",
     "./webpack.config.ts"
   ]
 }

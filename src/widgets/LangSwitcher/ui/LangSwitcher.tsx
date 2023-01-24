@@ -16,12 +16,12 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
   }
 
   return (
-    <Button
-      className={cn('', {}, [className])}
-      onClick={changeLanguage}
-      mods={ButtonMods.CLEAR}
-    >
-      {t('язык')}
-    </Button>
+        <Button
+            className={cn('', {}, [className])}
+            onClick={changeLanguage}
+            mods={ButtonMods.CLEAR}
+        >
+            {t('язык')}
+        </Button>
   )
 }
